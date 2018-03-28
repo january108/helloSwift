@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     var cnt: Int = 0
     
+    @IBOutlet weak var message: UILabel!
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var button1: UIButton!
 
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        message.text = "ようこそ！"
         button1.setImage(UIImage.init(named: "anntena"), for: UIControlState.normal)
     }
 
