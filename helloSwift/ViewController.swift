@@ -10,9 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var cnt: Int = 0
+    
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var button1: UIButton!
+
+    @IBAction func btn(_ sender: Any) {
+        cnt = cnt + 1
+        myLabel.text = "\(cnt)件"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        button1.setImage(UIImage.init(named: "anntena"), for: UIControlState.normal)
     }
 
     override func didReceiveMemoryWarning() {
